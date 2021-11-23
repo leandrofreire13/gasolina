@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% for gasto in gastos %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Valor gasto</th>
+      <th scope="col">Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>R$ {{ gasto.valor }}</td>
+      <td>{{ gasto.data|date:'d-m-Y' }}</td>
+    </tr>
+  </tbody>
+</table>
+{% endfor %}
+
+{% endblock %}
